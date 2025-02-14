@@ -1,8 +1,9 @@
-﻿using System;
+﻿using MongoDB.Driver;
+using System;
 
 public class MongoDbService
 {
-	private readonly IMongoDataBase _database
+	private readonly IMongoDatabase _database;
 		public MongoDbService(IConfiguration config)
 	{
 		var connectionString = config["MongoDB:ConnectionString"];
